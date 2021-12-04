@@ -1,6 +1,11 @@
 #include<iostream>
 #include<fstream>
 using namespace std;
+void insert(char& ch, int a) {
+	ch *= 2;
+	if (a)
+		ch += 1;
+}
 class Node {
 public:
 	char data;
@@ -31,7 +36,25 @@ public:
 			temp = temp->right;
 		}
 	}
+	void Encode(string a, string b) {
+		fstream re(a, ios::in | ios::binary);
+		fstream we(b, ios::out | ios::binary);
+		char ch;
+		while (1) {
+			re.read(&ch, sizeof(ch));
+			char to_write = 0;
+			Node* temp = root;
+			while (temp) {
+				if (temp->left->data == ch);
+				insert(ch, 0);
+				else {
+					temp=temp->
+				}
+			}
+		}
+	}
 };
+
 int main() {
 	fstream a;
 	a.open("Hoffman.txt", ios::in);

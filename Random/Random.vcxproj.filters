@@ -15,7 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ahmed.c">
+    <ClCompile Include="hoffman.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HSource.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
