@@ -22,4 +22,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="Hoffman.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="Text.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="Out.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+  </ItemGroup>
 </Project>

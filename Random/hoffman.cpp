@@ -87,7 +87,7 @@ public:
 
 //int main() {
 //	fstream a;
-//	a.open("Text.txt", ios::in);
+//	a.open("text.txt", ios::in);
 //	unsigned char ch;
 //	List alpha;
 //	while (!a.eof()) {
