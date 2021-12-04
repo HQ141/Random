@@ -1,2 +1,5 @@
-﻿  test.cpp
-C:\Users\HQ\source\repos\Random\Random\test.cpp(13,20): error C4996: 'ctime': This function or variable may be unsafe. Consider using ctime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+﻿  ahmed.c
+C:\Users\HQ\source\repos\Random\Random\ahmed.c(18,35): warning C4020: 'subsequence': too many actual parameters
+C:\Users\HQ\source\repos\Random\Random\ahmed.c(10,2): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\HQ\source\repos\Random\Random\ahmed.c(13,2): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\HQ\source\repos\Random\Random\ahmed.c(28,71): warning C4029: declared formal parameter list different from definition
