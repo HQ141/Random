@@ -15,22 +15,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="hoffman.cpp">
+    <ClInclude Include="Bst.h">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="HSource.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Hoffman.txt">
+    <ClCompile Include="Source.cpp">
       <Filter>Source Files</Filter>
-    </Text>
-    <Text Include="Text.txt">
-      <Filter>Source Files</Filter>
-    </Text>
-    <Text Include="Out.txt">
-      <Filter>Source Files</Filter>
-    </Text>
+    </ClCompile>
   </ItemGroup>
 </Project>

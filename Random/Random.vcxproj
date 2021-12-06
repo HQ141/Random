@@ -19,13 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="hoffman.cpp" />
-    <ClCompile Include="HSource.cpp" />
+    <ClInclude Include="Bst.h" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Hoffman.txt" />
-    <Text Include="Out.txt" />
-    <Text Include="Text.txt" />
+    <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

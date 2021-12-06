@@ -22,10 +22,82 @@ public:
 				left = new Node<T>(a);
 		}
 	}
+	Node<T>* balance() {
+		if (abs(get_bal()) < 2) {
+			if(right)
+			right = right->balance();
+			if (left)
+				left = left->balance();
+		}
+		else if (right&& abs(right->get_bal()) == 2) {
+				right = right->balance();
+		}
+		else if (left&& abs(left->get_bal()) == 2) {
+				left = left->balance();
+		}
+		else {
+			if (get_bal() > 0) {
+				if (right->get_bal() > 0) {
+					Node<T>* up = right;
+					right = up->left;
+					up->left = this;
+					return up;
+				}
+				else {
+					Node<T>* up = right->left;
+					Node<T>* r = right;
+					right = up->left;
+					r->left = up->right;
+					up->right = r;
+					up->left = this;
+					return up;
+				}
+			}
+			else {
+				if (left->get_bal() < 0) {
+					Node<T>* up = left;
+					left = up->right;
+					up->right = this;
+					return up;
+				}
+				else {
+					Node<T>* up = left->right;
+					Node<T>* l = left;
+					left = up->right;
+					l->right = up->left;
+					up->left = l;
+					up->right = this;
+					return up;
+				}
+			}
+		}
+		return this;
+	}
+	int get_bal() {
+		if (left && right)
+			return right->get_h() - left->get_h();
+		if (right)
+			return right->get_h();
+		if (left)
+			return -left->get_h();
+		return 0;
+	}
+	
+	int get_h() {
+		int r_h = 0;
+		int l_h = 0;
+		if (right) 
+			r_h=right->get_h();
+		if (left)
+			l_h = left->get_h();
+		if (r_h > l_h)
+			return r_h + 1;
+		return l_h + 1;
+	}
 	void Inorder() {
 		if(left)
 		left->Inorder();
-		cout << data << endl;
+		cout << data <<" " << get_h()<<" "<<get_bal() << endl;
 		if(right)
 		right->Inorder();
 	}
@@ -136,6 +208,10 @@ public:
 		else {
 			root = new Node<T>(a);
 		}
+		balance();
+	}
+	void balance() {
+		root = root->balance();
 	}
 	void Inorder() {
 		if(root)

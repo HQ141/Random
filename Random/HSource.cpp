@@ -1,6 +1,90 @@
 #include<iostream>
 #include<fstream>
 using namespace std;
+class LNode {
+public:
+	char data;
+	int freq;
+	LNode* next;
+	LNode(char a) :data(a), freq(1), next(NULL) {}
+};
+class List {
+private:
+	LNode* head;
+public:
+	List() :head(NULL) {}
+	void Insert(char a) {
+		LNode* temp = head;
+		if (!temp) {
+			head = new LNode(a);
+			return;
+		}
+		while (temp->next && temp->next->data < a) {
+			temp = temp->next;
+		}
+		if (temp->next && temp->next->data == a)
+			temp->next->freq++;
+		else {
+			LNode* t = new LNode(a);
+			t->next = temp->next;
+			temp->next = t;
+		}
+	}
+	void display() {
+		LNode* temp = head;
+		while (temp) {
+			cout << temp->data << "," << temp->freq << "->";
+			temp = temp->next;
+		}
+	}
+	void ss() {
+		LNode* althead = new LNode(0);
+		althead->next = head;
+		LNode* trav1 = althead;
+		LNode* trav2;
+		while (trav1 && trav1->next) {
+			trav2 = trav1->next;
+			while (trav2 && trav2->next) {
+				if (trav1->next->freq < trav2->next->freq) {
+					if (trav1->next == trav2) {
+						if (trav1->next == head)
+							head = trav1->next->next;
+						LNode* temp = trav1->next;
+						trav1->next = trav1->next->next;
+						temp->next = trav1->next->next;
+						trav1->next->next = temp;
+					}
+					else {
+						if (trav1->next == head)
+							head = trav2->next;
+						LNode* temp = trav1->next->next;
+						trav1->next->next = trav2->next->next;
+						trav2->next->next = temp;
+						temp = trav1->next;
+						trav1->next = trav2->next;
+						trav2->next = temp;
+					}
+				}
+				trav2 = trav2->next;
+			}
+			trav1 = trav1->next;
+		}
+		delete althead;
+	}
+	void wtf() {
+		fstream a;
+		a.open("Hoffman.txt", ios::out);
+		LNode* temp = head;
+		string ab = "";
+		while (temp) {
+			ab += temp->data;
+			temp = temp->next;
+		}
+		a << ab;
+		a.close();
+	}
+};
+
 void insert(unsigned char& ch, int a) {
 	ch *= 2;
 	if (a)
@@ -121,8 +205,20 @@ public:
 };
 
 int main() {
+	fstream a;
+	a.open("Text.txt", ios::in);
+	unsigned char ch;
+	List alp;
+	while (!a.eof()) {
+	ch = a.get();
+	alp.Insert(ch);
+	if (a.peek() == EOF)
+		break;
+	}
+	alp.ss();
+	a.close();
+	alp.wtf();
 	HTree alpha("Hoffman.txt");
-	alpha.Display();
 	alpha.Encode("Text.txt", "Out.txt");
 	alpha.Decode("Out.txt");
 }
