@@ -3,8 +3,8 @@
 #include<fstream>
 using namespace std;
 struct hash_data {
-	size_t hash;
-	char level;
+	uint64_t hash;
+	bool level;
 };
 int main() {
 	fstream config;
