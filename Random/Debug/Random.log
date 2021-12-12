@@ -1,2 +1,9 @@
-﻿  Source.cpp
-  Random.vcxproj -> C:\Users\HQ\source\repos\Random\Debug\Random.exe
+﻿  Sorce.cpp
+C:\Users\HQ\source\repos\Random\Random\Sorce.cpp(120,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\HQ\source\repos\Random\Random\Sorce.cpp(127,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\HQ\source\repos\Random\Random\Sorce.cpp(136,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\HQ\source\repos\Random\Random\Sorce.cpp(143,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\HQ\source\repos\Random\Random\Sorce.cpp(162,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\HQ\source\repos\Random\Random\Sorce.cpp(170,1): error C2679: binary '+=': no operator found which takes a right-hand operand of type 'score' (or there is no acceptable conversion)
+C:\Users\HQ\source\repos\Random\Random\Sorce.cpp(80,9): message : could be 'score &score::operator +=(score &)'
+C:\Users\HQ\source\repos\Random\Random\Sorce.cpp(170,1): message : while trying to match the argument list '(score, score)'
