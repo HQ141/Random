@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="tic_tac_toe.cpp">
+    <ClCompile Include="terminology.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

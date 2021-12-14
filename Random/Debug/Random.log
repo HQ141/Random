@@ -1,9 +1,32 @@
 ﻿  Sorce.cpp
-C:\Users\HQ\source\repos\Random\Random\Sorce.cpp(139,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\HQ\source\repos\Random\Random\Sorce.cpp(162,21): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
-C:\Users\HQ\source\repos\Random\Random\Sorce.cpp(167,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\HQ\source\repos\Random\Random\Sorce.cpp(183,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\HQ\source\repos\Random\Random\Sorce.cpp(193,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\HQ\source\repos\Random\Random\Sorce.cpp(209,22): warning C4018: '<': signed/unsigned mismatch
-C:\Users\HQ\source\repos\Random\Random\Sorce.cpp(229,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\HQ\source\repos\Random\Random\Sorce.cpp(112,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\HQ\source\repos\Random\Random\Sorce.cpp(110): message : while compiling class template member function 'void Node<T>::Preorder(void)'
+          with
+          [
+              T=std::string
+          ]
+C:\Users\HQ\source\repos\Random\Random\Sorce.cpp(226): message : see reference to function template instantiation 'void Node<T>::Preorder(void)' being compiled
+          with
+          [
+              T=std::string
+          ]
+C:\Users\HQ\source\repos\Random\Random\Sorce.cpp(226): message : see reference to class template instantiation 'Node<T>' being compiled
+          with
+          [
+              T=std::string
+          ]
+C:\Users\HQ\source\repos\Random\Random\Sorce.cpp(224): message : while compiling class template member function 'void BST<std::string>::Preorder(void)'
+C:\Users\HQ\source\repos\Random\Random\Sorce.cpp(247): message : see reference to function template instantiation 'void BST<std::string>::Preorder(void)' being compiled
+C:\Users\HQ\source\repos\Random\Random\Sorce.cpp(230): message : see reference to class template instantiation 'BST<std::string>' being compiled
+C:\Users\HQ\source\repos\Random\Random\Sorce.cpp(104,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\HQ\source\repos\Random\Random\Sorce.cpp(100): message : while compiling class template member function 'void Node<T>::Inorder(void)'
+          with
+          [
+              T=std::string
+          ]
+C:\Users\HQ\source\repos\Random\Random\Sorce.cpp(222): message : see reference to function template instantiation 'void Node<T>::Inorder(void)' being compiled
+          with
+          [
+              T=std::string
+          ]
   Random.vcxproj -> C:\Users\HQ\source\repos\Random\Debug\Random.exe
