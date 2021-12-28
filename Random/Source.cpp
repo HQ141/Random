@@ -1,17 +1,21 @@
 #include<iostream>
-#include"Bst.h"
+#include"ggraph.h"
 int main(){
-	BST<int> a;
-	a.Insert(55);
-	a.Insert(66);
-	a.Insert(77);
-	a.Insert(11);
-	a.Insert(33);
-	a.Insert(22);
-	a.Insert(35);
-	a.Insert(25);
-	a.Insert(44);
-	a.Insert(88);
-	a.Insert(99);
-	a.Inorder();
+	Graph<int> alpha;
+	alpha.insertVertice(0);
+	alpha.insertVertice(1);
+	alpha.insertVertice(2);
+	alpha.insertVertice(3);
+	alpha.insertVertice(4);
+	alpha.insertVertice(5);
+	alpha.UInsertEdges(0, 1);
+	alpha.UInsertEdges(0, 5);
+	alpha.UInsertEdges(0, 2);
+	alpha.UInsertEdges(2, 1);
+	alpha.UInsertEdges(4, 2);
+	alpha.UInsertEdges(2, 3);
+	alpha.UInsertEdges(5, 3);
+	alpha.UInsertEdges(4, 3);
+	alpha.resetvist();
+	alpha.Bfs();
 }
